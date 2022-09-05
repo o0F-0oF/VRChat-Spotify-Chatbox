@@ -1,2 +1,2 @@
 # VRChat-Spotify-Chatbox
-half this is not my :D but this works:tm:
+half this is not mine :D, but this works:tm:
