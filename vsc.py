@@ -1,3 +1,4 @@
+from re import A
 from pythonosc.udp_client import SimpleUDPClient
 import win32gui
 import win32process
@@ -6,6 +7,7 @@ import ctypes
 import time
 
 spotifyName = ""
+a = ["", True]
 b = [f"{spotifyName}", True]
 ip = "127.0.0.1"
 port = 9000
@@ -56,15 +58,16 @@ def getspotifyHandle():
 spotify_handle = getspotifyHandle()
 
 while(True):
-    if(getWindowTitleByHandle(spotify_handle) != spotifyName):
-        spotifyName = getWindowTitleByHandle(spotify_handle)
-        b[0] = f"{spotifyName}"
-        time.sleep(2)
-        client.send_message("/chatbox/input", b)
-        print("sent!")
+    if(getWindowTitleByHandle(spotify_handle) == "Spotify Free" or getWindowTitleByHandle(spotify_handle) == "Spotify Premium"):
+        client.send_message("/chatbox/input", a)
+        print('play music')
     else:
-        print("we already had it but sending it again :D")
-        time.sleep(2)
-        client.send_message("/chatbox/input", b)
-        print("sent!")
-    time.sleep(5)
+        if(getWindowTitleByHandle(spotify_handle) != spotifyName):
+            spotifyName = getWindowTitleByHandle(spotify_handle)
+            b[0] = f"{spotifyName}"
+            client.send_message("/chatbox/input", b)
+            print("sent!")
+        else:
+            client.send_message("/chatbox/input", b)
+            print("we already had it but sending it again :D")
+    time.sleep(2)
