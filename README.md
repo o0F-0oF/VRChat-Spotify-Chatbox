@@ -1,2 +1,2 @@
 # VRChat-Spotify-Chatbox
-hella scuffed
+half this is not my :D but this works:tm:
