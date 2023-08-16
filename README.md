@@ -1,5 +1,5 @@
 # VRChat-Spotify-Chatbox
-I'm remaking this in c# it'll be out soon:tm:<br />
+I've remade this in c#, i'd recommend you check that out here https://github.com/o0F-0oF/VRChat-Spotify-Chatbox-CS<br />
 half this is not mine :D, but this works:tm:<br />
 (credits to stackoverflow <3)<br />
 <br />
